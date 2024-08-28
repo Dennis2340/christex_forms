@@ -52,7 +52,7 @@ export default async function Home() {
           </>
         ) : null}
 
-        <Link href="/formbuilder" className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100">
+        <Link href="/dashboard" className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100">
           <h2 className="mb-3 text-2xl font-semibold text-gray-900">
             Form Builder
             <span className="inline-block transition-transform group-hover:translate-x-1">-&gt;</span>
@@ -62,7 +62,7 @@ export default async function Home() {
           </p>
         </Link>
 
-        <Link href="/analytics" className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100">
+        <Link href="/#" className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100">
           <h2 className="mb-3 text-2xl font-semibold text-gray-900">
             Analytics
             <span className="inline-block transition-transform group-hover:translate-x-1">-&gt;</span>
@@ -72,7 +72,7 @@ export default async function Home() {
           </p>
         </Link>
 
-        <Link href="/templates" className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100">
+        <Link href="/#" className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100">
           <h2 className="mb-3 text-2xl font-semibold text-gray-900">
             Explore Templates
             <span className="inline-block transition-transform group-hover:translate-x-1">-&gt;</span>

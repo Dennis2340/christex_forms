@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { KindeUser } from '@kinde-oss/kinde-auth-nextjs/types';
+import { MyLoader } from './MyLoader';
 
 const FormDashboard: React.FC<{user: KindeUser | null}> = ({user}: {user:KindeUser | null}) => {
   const [forms, setForms] = useState<any[]>([]);
@@ -30,7 +31,7 @@ const FormDashboard: React.FC<{user: KindeUser | null}> = ({user}: {user:KindeUs
       </div>
 
       {forms.length === 0 ? (
-        <p className="text-gray-500">No forms created yet. Start by creating a new form.</p>
+        <MyLoader/>
       ) : (
         <ul className="space-y-4">
           {forms?.map((form) => (
