@@ -12,7 +12,6 @@ const DateFieldComponent = ({ label, value, onChange }: {label:string, value:str
         onChange={onChange} 
         className="form-control" 
       />
-      
     </div>
   );
 };

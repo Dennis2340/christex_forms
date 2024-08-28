@@ -12,6 +12,18 @@ export async function POST(req: Request) {
 
     if (!userId) return new Response("Unauthorized", { status: 401 });
 
+    const dBUser = await db.user.findFirst({
+      where: {id: userId}
+    })
+    if(!dBUser){
+      await db.user.create({
+        data: {
+          id: userId,
+          email: user.email!,
+          name: `${user.given_name} ${user.family_name}`,
+        }
+      })
+    }
     const newForm = await db.form.create({
       data: {
         title,

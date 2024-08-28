@@ -30,22 +30,3 @@ export async function POST(req: Request, { params }: { params: { formId: string 
     );
   }
 }
-
-export async function GET(req: Request, { params }: { params: { formId: string } }) {
-  try {
-    const submissions = await db.submission.findMany({
-      where: { formId: params.formId },
-    });
-
-    return new Response(JSON.stringify(submissions), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
-  } catch (error) {
-    console.error(error);
-    return new Response(
-      JSON.stringify({ message: "Error occurred", error }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
-  }
-}

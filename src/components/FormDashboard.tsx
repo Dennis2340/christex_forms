@@ -13,6 +13,7 @@ const FormDashboard: React.FC<{user: KindeUser | null}> = ({user}: {user:KindeUs
         const response = await fetch('/api/forms')
         const userForms = await response.json()
         setForms(userForms);
+        console.log(userForms)
       }
     };
 
@@ -32,7 +33,7 @@ const FormDashboard: React.FC<{user: KindeUser | null}> = ({user}: {user:KindeUs
         <p className="text-gray-500">No forms created yet. Start by creating a new form.</p>
       ) : (
         <ul className="space-y-4">
-          {forms.map((form) => (
+          {forms?.map((form) => (
             <li key={form.id} className="bg-white p-4 rounded-lg shadow">
               <h2 className="text-xl font-semibold">{form.title}</h2>
               <p className="text-gray-600">{form.description || 'No description provided.'}</p>
@@ -51,8 +52,11 @@ const FormDashboard: React.FC<{user: KindeUser | null}> = ({user}: {user:KindeUs
                   </li>
                 ))}
               </ul>
-              <Link href={`/form/${form.id}/analytics`}>
-                <a className="text-blue-500 hover:underline mt-4 block">View Analytics</a>
+              <Link href={`/dashboard/${form.id}/analytics`} className="text-blue-500 hover:underline mt-4 block">
+                View Analytics
+              </Link>
+              <Link href={`/dashboard/${form.id}`} className="text-blue-500 hover:underline mt-4 block">
+                Share
               </Link>
             </li>
           ))}
