@@ -16,14 +16,8 @@ const Navbar = async () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex space-x-8">
-          <Link href="/formbuilder" className="hover:text-gray-300">
+          <Link href="/dashboard" className="hover:text-gray-300">
             Form Builder
-          </Link>
-          <Link href="/analytics" className="hover:text-gray-300">
-            Analytics
-          </Link>
-          <Link href="/templates" className="hover:text-gray-300">
-            Templates
           </Link>
         </div>
 
@@ -46,15 +40,10 @@ const Navbar = async () => {
       {/* Mobile Navigation */}
       <div className="md:hidden flex justify-between mt-4">
         <div className="space-x-4">
-          <Link href="/formbuilder" className="hover:text-gray-300">
+          <Link href="/dashboard" className="hover:text-gray-300">
             Form Builder
           </Link>
-          <Link href="/analytics" className="hover:text-gray-300">
-            Analytics
-          </Link>
-          <Link href="/templates" className="hover:text-gray-300">
-            Templates
-          </Link>
+          
         </div>
       </div>
     </nav>
